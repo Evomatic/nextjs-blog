@@ -1,5 +1,8 @@
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
 import styles from './layout.module.css';
-
+import utilStyles from '../styles/utils.module.css';
 
 const name = 'Evomatic';
 export const siteTitle = 'next.js example website';
@@ -26,7 +29,7 @@ export default function Layout({children, home}) {
               <>
             <Image 
                priority
-               src='/images/profile.jpeg'
+               src='/images/profile.jpg'
                className={utilStyles.borderCircle}
                height={144}
                width={144}
@@ -40,7 +43,7 @@ export default function Layout({children, home}) {
               <a>
                <Image 
                  priority
-                 src="/images/profile.jpeg"
+                 src="/images/profile.jpg"
                  className={utilStyles.borderCircle}
                  height={108}
                  width={108}
@@ -48,7 +51,7 @@ export default function Layout({children, home}) {
                 />   
               </a>
               </Link>
-              <h2 className={utilStyiles.headingLg}>
+              <h2 className={utilStyles.headingLg}>
                   <Link href='/'>
                      <a className={utilStyles.colorInherit}>{name}</a>   
                   </Link>
